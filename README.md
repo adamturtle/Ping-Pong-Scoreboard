@@ -1,6 +1,7 @@
-# Node.js Websocket Test
+# Football Pong Scoreboard
 
-A tiny demo using the [einaros/ws](http://einaros.github.io/ws/) WebSockets implementation.
+Web app for displaying a scoreboard for a game me and friends created for the SuperBowl.
+
 
 # Running Locally
 
