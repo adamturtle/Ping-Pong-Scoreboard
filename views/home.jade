@@ -4,7 +4,11 @@ html
         title= "Football Pong Scoreboard"
         script(src='/script.js')
         script(src='/socket.io/socket.io.js')
+        link(href='/style.css' rel="stylesheet" type="text/css")
     body
-        #content
-          button(href="/new_game")
-            New Game
+        #container
+            #scores.boxes
+                #home-score.box
+                    = "7"
+                #away-score.box
+                    = "14"
