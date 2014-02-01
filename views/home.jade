@@ -7,8 +7,49 @@ html
         link(href='/style.css' rel="stylesheet" type="text/css")
     body
         #container
-            #scores.boxes
+            .first-row
                 #home-score.box
-                    = "7"
+                    h4.label= "Vendetta"
+                    .number
+                        span= "7"
+                    .clear
+                    .timeouts
+                        .number
+                            span= "3"
+                        .label= "TOL"
+                    
+                #timer.box
+                    .box
+                        .number= "4"
+                        span= ":"
+                        .number= "34"
+
                 #away-score.box
-                    = "14"
+                    h4.label= "Creepers"
+                    .number
+                        span= "14"
+                    .clear
+                    .timeouts
+                        .number
+                            span= "3"
+                        .label= "TOL"
+
+            .clear
+
+            .second-row
+                #quarter.box
+                    .number
+                        span= "2"
+                    .label= "QUARTER"
+
+                #down.box
+                    .number
+                        span= "4"
+                    .label= "DOWN"
+
+                #playclock.box
+                    .number
+                        span= "20"
+                    .label= "PLAY"
+
+                .clear
