@@ -1,0 +1,22 @@
+doctype html
+html
+    head
+        title= "Football Pong Scoreboard Ref"
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        script(src='/script.js')
+        script(src='/socket.io/socket.io.js')
+    body
+      #container
+        #home-score
+          strong= "Home team"
+          button.field_goal= "FG"
+          button.touchdown= "TD"
+          button.pat= "PAT"
+          button.reset= "reset"
+
+        #away-score
+          strong= "Away team"
+          button.field_goal= "FG"
+          button.touchdown= "TD"
+          button.pat= "PAT"
+          button.reset= "reset"

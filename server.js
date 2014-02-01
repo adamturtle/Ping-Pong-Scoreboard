@@ -18,6 +18,10 @@ app.get('/', function(req, res){
   res.render('home');
 });
 
+app.get('/ref', function(req, res) {
+	res.render('ref');
+});
+
 io.sockets.on('connection', function (socket) {
     //socket.emit('message', { message: 'welcome to the chat' });
     console.log('connection established');
