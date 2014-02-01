@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-	var socket = io.connect('http://localhost:3000');
+	var socket = io.connect('http://' + window.location.host);
 
 	socket.emit('test');
 

@@ -1,6 +1,5 @@
 $(document).ready(function() {
- 
-    var socket = io.connect('http://localhost:3000');
+    var socket = io.connect('http://' + window.location.host);
     
     socket.on('change-home-team-score', function (data) {
         $('#home-team-score').html(data.score);
