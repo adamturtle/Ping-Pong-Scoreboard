@@ -3,20 +3,56 @@ html
     head
         title= "Football Pong Scoreboard Ref"
         meta(name="viewport" content="width=device-width, initial-scale=1")
-        script(src='/script.js')
+        script(src='/jquery.min.js')
         script(src='/socket.io/socket.io.js')
+        script(src='/ref.js')
+        link(href='/ref.css' rel="stylesheet" type="text/css")
     body
       #container
         #home-score
-          strong= "Home team"
-          button.field_goal= "FG"
-          button.touchdown= "TD"
-          button.pat= "PAT"
-          button.reset= "reset"
+          h4= "Home team "
+          strong= "Points: "
+          input(id="home-team-score" type="number" value="0")
+
+          button#home-field-goal= "FG"
+          button#home-touchdown= "TD"
+          button#home-pat= "PAT"
+          button#home-reset= "reset"
+
+          .clear
+          strong= "Timeouts: "
+          input(id="home-team-timeouts" type="number" value="0")
 
         #away-score
-          strong= "Away team"
-          button.field_goal= "FG"
-          button.touchdown= "TD"
-          button.pat= "PAT"
-          button.reset= "reset"
+          h4= "Away Team"
+          strong= "Points: "
+          input(id="away-team-score" type="number" value="0")
+
+          button#away-field-goal= "FG"
+          button#away-touchdown= "TD"
+          button#away-pat= "PAT"
+          button#away-reset= "reset"
+
+          .clear
+          strong= "Timeouts: "
+          input(id="away-team-timeouts" type="number" value="0") 
+
+        #quarter
+          h4= "Quarter"
+          input(id="quarter-counter" type="number" value="1")
+
+        #down
+          h4= "Down"
+          input(id="down-counter" type="number" value="1")
+
+        #play-clock
+          h4= "Play Clock"
+          button#playclock-reset= "reset"
+
+        #clock
+          h4= "Game Clock"
+          button#gameclock-play= "Play"
+          button#gameclock-pause= "Pause"
+          button#gameclock-reset= "reset"
+          button#gameclock-add-min= "add 1 min"
+          button#gameclock-minus-min= "minus 1 min"

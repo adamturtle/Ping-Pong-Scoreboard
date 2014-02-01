@@ -2,8 +2,9 @@ doctype html
 html
     head
         title= "Football Pong Scoreboard"
-        script(src='/script.js')
         script(src='/socket.io/socket.io.js')
+        script(src='/jquery.min.js')
+        script(src='/script.js')
         link(href='/style.css' rel="stylesheet" type="text/css")
     body
         #container
@@ -11,11 +12,11 @@ html
                 #home-score.box
                     h4.label= "Vendetta"
                     .number
-                        span= "7"
+                        span#home-team-score= "0"
                     .clear
                     .timeouts
                         .number
-                            span= "3"
+                            span#home-team-timeouts= "3"
                         .label= "TOL"
                     
                 #timer.box
@@ -27,11 +28,11 @@ html
                 #away-score.box
                     h4.label= "Creepers"
                     .number
-                        span= "14"
+                        span#away-team-score= "0"
                     .clear
                     .timeouts
                         .number
-                            span= "3"
+                            span#away-team-timeouts= "3"
                         .label= "TOL"
 
             .clear
@@ -39,17 +40,17 @@ html
             .second-row
                 #quarter.box
                     .number
-                        span= "2"
+                        span#quarter-number= "1"
                     .label= "QUARTER"
 
                 #down.box
                     .number
-                        span= "4"
+                        span#down-counter= "1"
                     .label= "DOWN"
 
                 #playclock.box
                     .number
-                        span= "20"
+                        span#playclock-timer= "20"
                     .label= "PLAY"
 
                 .clear
