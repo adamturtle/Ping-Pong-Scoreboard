@@ -1,27 +1,24 @@
-var WebSocketServer = require('ws').Server
-  , http = require('http')
-  , express = require('express')
+var express = require('express')
+  , port = 3000
   , app = express()
-  , port = process.env.PORT || 5000;
+  , jade = require('jade')
+  , jquery = require('jquery')
+  , io = require('socket.io').listen(app.listen(port));
 
-app.use(express.static(__dirname + '/'));
+app.set('views', __dirname + '/views');
+app.set('view engine', 'jade');
+app.set("view options", { layout: false });
 
-var server = http.createServer(app);
-server.listen(port);
+app.configure(function() {
+  app.use(express.static(__dirname + '/public'));
+});
 
-console.log('http server listening on %d', port);
+// load route at root
+app.get('/', function(req, res){
+  res.render('home');
+});
 
-var wss = new WebSocketServer({server: server});
-console.log('websocket server created');
-wss.on('connection', function(ws) {
-    var id = setInterval(function() {
-        ws.send(JSON.stringify(new Date()), function() {  });
-    }, 1000);
-
-    console.log('websocket connection open');
-
-    ws.on('close', function() {
-        console.log('websocket connection close');
-        clearInterval(id);
-    });
+io.sockets.on('connection', function (socket) {
+    //socket.emit('message', { message: 'welcome to the chat' });
+    console.log('connection established');
 });
