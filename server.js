@@ -1,5 +1,5 @@
 var express = require('express')
-  , port = 3000
+  , port = process.env.PORT || 3000
   , app = express()
   , jade = require('jade')
   , server = require('http').createServer(app)
