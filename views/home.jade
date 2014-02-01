@@ -2,6 +2,7 @@ doctype html
 html
     head
         title= "Football Pong Scoreboard"
+        meta(name="viewport" content="width=device-width, initial-scale=1")
         script(src='/socket.io/socket.io.js')
         script(src='/jquery.min.js')
         script(src='/script.js')
@@ -10,9 +11,9 @@ html
         #container
             .first-row
                 #home-score.box
-                    h4.label= "Vendetta"
+                    h4.label= "Creepers"
                     .number
-                        span#home-team-score= "0"
+                        span#home-team-score.score= "0"
                     .clear
                     .timeouts
                         .number
@@ -20,15 +21,15 @@ html
                         .label= "TOL"
                     
                 #timer.box
-                    .box
+                    .inner-box
                         .number= "4"
                         span= ":"
                         .number= "34"
 
                 #away-score.box
-                    h4.label= "Creepers"
+                    h4.label= "Vendetta"
                     .number
-                        span#away-team-score= "0"
+                        span#away-team-score.score= "0"
                     .clear
                     .timeouts
                         .number
