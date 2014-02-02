@@ -9,45 +9,51 @@ html
         link(href='/ref.css' rel="stylesheet" type="text/css")
     body
       #container
-        #home-score
-          h4= "Home team "
-          strong= "Points: "
-          input(id="home-team-score" type="number" value="0")
-
-          button#home-field-goal= "FG"
-          button#home-touchdown= "TD"
-          button#home-pat= "PAT"
-          button#home-reset= "reset"
-
-          .clear
-          strong= "Timeouts: "
-          input(id="home-team-timeouts" type="number" value="0")
-
         #away-score
           h4= "Away Team"
           strong= "Points: "
-          input(id="away-team-score" type="number" value="0")
-
           button#away-field-goal= "FG"
           button#away-touchdown= "TD"
           button#away-pat= "PAT"
+          
+          input(id="away-team-score" type="number" value="0" style="width: 60px; margin-left: 20px;")
           button#away-reset= "reset"
 
           .clear
           strong= "Timeouts: "
-          input(id="away-team-timeouts" type="number" value="0") 
+          button#away-team-timeouts-up= "+1"
+          button#away-team-timeouts-down= "-1"
+
+        #home-score
+          h4= "Home team "
+          strong= "Points: "
+
+          button#home-field-goal= "FG"
+          button#home-touchdown= "TD"
+          button#home-pat= "PAT"
+
+          input(id="home-team-score" type="number" value="0" style="width: 60px; margin-left: 20px;")
+          button#home-reset= "reset"
+
+          .clear
+          strong= "Timeouts: "
+          button#home-team-timeouts-up= "+1"
+          button#home-team-timeouts-down= "-1"
 
         #quarter
           h4= "Quarter"
-          input(id="quarter-counter" type="number" value="1")
+          button#quarter-up= "+1"
+          button#quarter-down= "-1"
 
         #down
           h4= "Down"
-          input(id="down-counter" type="number" value="1")
+          button#down-up= "+1"
+          button#down-down= "-1"
+          button#down-reset= "reset"
 
         #play-clock
-          h4= "Play Clock"
-          button#playclock-reset= "reset"
+          h4= "Play Clock" 
+          button#playclock-reset= "reset/play"
 
         #clock
           h4= "Game Clock"

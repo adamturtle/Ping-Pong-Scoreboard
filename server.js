@@ -44,7 +44,6 @@ io.sockets.on('connection', function (socket) {
     io.sockets.emit('change-quarter', data);
   });
   socket.on('update-down', function (data) {
-    console.log(data);
     io.sockets.emit('change-down', data);
   });
   socket.on('reset-playclock', function (data) {

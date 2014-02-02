@@ -5,9 +5,7 @@ $(document).ready(function() {
 	socket.emit('test');
 
 	var $homeTeamScore = $('#home-team-score'),
-		$homeTeamTimeouts = $('#home-team-timeouts'),
-		$awayTeamScore = $('#away-team-score'),
-		$awayTeamTimeouts = $('#away-team-timeouts');
+		$awayTeamScore = $('#away-team-score');
 
 	$homeTeamScore.change(function() {
 		var score = $(this).val();
@@ -54,24 +52,34 @@ $(document).ready(function() {
 	});
 
 
-	$homeTeamTimeouts.change(function() {
-		socket.emit('update-home-team-timeouts', { timeouts: $(this).val() });
+	$('#away-team-timeouts-up').click(function() {
+		socket.emit('update-away-team-timeouts', { direction: 'up' });
+	});
+	$('#away-team-timeouts-down').click(function() {
+		socket.emit('update-away-team-timeouts', { direction: 'down' });
+	});
+	$('#home-team-timeouts-up').click(function() {
+		socket.emit('update-home-team-timeouts', { direction: 'up' });
+	});
+	$('#home-team-timeouts-down').click(function() {
+		socket.emit('update-home-team-timeouts', { direction: 'down' });
 	});
 
-	$awayTeamTimeouts.change(function() {
-		socket.emit('update-away-team-timeouts', { timeouts: $(this).val() });
+	$('#quarter-up').click(function() {
+		socket.emit('update-quarter', { direction: 'up' });
+	});
+	$('#quarter-down').click(function() {
+		socket.emit('update-quarter', { direction: 'down' });
 	});
 
-	$homeTeamTimeouts.change(function() {
-		socket.emit('update-home-team-timeouts', { timeouts: $(this).val() });
+	$('#down-up').click(function() {
+		socket.emit('update-down', { direction: 'up' });
 	});
-
-	$('#quarter-counter').change(function() {
-		socket.emit('update-quarter', { value: $(this).val() });
+	$('#down-down').click(function() {
+		socket.emit('update-down', { direction: 'down' });
 	});
-
-	$('#down-counter').change(function() {
-		socket.emit('update-down', { value: $(this).val() });
+	$('#down-reset').click(function() {
+		socket.emit('update-down', { value: 1 });
 	});
 
 	$('#playclock-reset').click(function() {
