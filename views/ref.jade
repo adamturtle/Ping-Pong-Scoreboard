@@ -8,16 +8,39 @@ html
         script(src='/ref.js')
         link(href='/ref.css' rel="stylesheet" type="text/css")
     body
+      h3= "Football Pong Scoreboard Controller"
+
       #container
+        #play-clock
+          h4= "Play Clock" 
+          button#playclock-play= "play/pause"
+          button#playclock-restart= "restart"
+
+        #down
+          h4= "Down"
+          button#down-up= "+1"
+          button#down-down= "-1"
+          button#down-reset= "reset"
+
+
+        #clock
+          h4= "Game Clock"
+          button#gameclock-play= "Play/Pause"
+          button#gameclock-reset.reset= "reset"
+          .clear
+          button#gameclock-add-min= "+1 min"
+          button#gameclock-minus-min= "-1 min"
+
         #away-score
           h4= "Away Team"
           strong= "Points: "
           button#away-field-goal= "FG"
           button#away-touchdown= "TD"
           button#away-pat= "PAT"
-          
-          input(id="away-team-score" type="number" value="0" style="width: 60px; margin-left: 20px;")
-          button#away-reset= "reset"
+
+          .clear
+          input(id="away-team-score" type="number" value="0" style="width: 60px; margin-right: 20px;")
+          button#away-reset.reset= "reset"
 
           .clear
           strong= "Timeouts: "
@@ -32,8 +55,9 @@ html
           button#home-touchdown= "TD"
           button#home-pat= "PAT"
 
-          input(id="home-team-score" type="number" value="0" style="width: 60px; margin-left: 20px;")
-          button#home-reset= "reset"
+          .clear
+          input(id="home-team-score" type="number" value="0" style="width: 60px; margin-right: 20px;")
+          button#home-reset.reset= "reset"
 
           .clear
           strong= "Timeouts: "
@@ -44,21 +68,3 @@ html
           h4= "Quarter"
           button#quarter-up= "+1"
           button#quarter-down= "-1"
-
-        #down
-          h4= "Down"
-          button#down-up= "+1"
-          button#down-down= "-1"
-          button#down-reset= "reset"
-
-        #play-clock
-          h4= "Play Clock" 
-          button#playclock-play= "play/pause"
-          button#playclock-restart= "restart"
-
-        #clock
-          h4= "Game Clock"
-          button#gameclock-play= "Play/Pause"
-          button#gameclock-reset= "reset"
-          button#gameclock-add-min= "add 1 min"
-          button#gameclock-minus-min= "minus 1 min"
