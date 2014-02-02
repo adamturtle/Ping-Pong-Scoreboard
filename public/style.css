@@ -122,10 +122,10 @@ body {
 	margin-bottom: 20px;
 }
 
-#away-score h4 {
+#home-score h4 {
 	color: #cc0000;
 }
 
-#home-score h4 {
+#away-score h4 {
 	color: blue;
 }

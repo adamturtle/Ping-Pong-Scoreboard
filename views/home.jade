@@ -10,15 +10,15 @@ html
     body
         #container
             .first-row
-                #home-score.box
+                #away-score.box
                     h4.label= "Creepers"
                     .number
-                        span#home-team-score.score= "0"
+                        span#away-team-score.score= "0"
                     .clear
                     .timeouts
                         .number
-                            span#home-team-timeouts= "3"
-                        .label= "TOL"
+                            span#away-team-timeouts= "3"
+                        .label= "TOL" 
                     
                 #timer.box
                     .inner-box
@@ -26,14 +26,14 @@ html
                         span= ":"
                         .number= "34"
 
-                #away-score.box
+                #home-score.box
                     h4.label= "Vendetta"
                     .number
-                        span#away-team-score.score= "0"
+                        span#home-team-score.score= "0"
                     .clear
                     .timeouts
                         .number
-                            span#away-team-timeouts= "3"
+                            span#home-team-timeouts= "3"
                         .label= "TOL"
 
             .clear
