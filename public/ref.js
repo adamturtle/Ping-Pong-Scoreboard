@@ -82,9 +82,12 @@ $(document).ready(function() {
 		socket.emit('update-down', { value: 1 });
 	});
 
-	$('#playclock-reset').click(function() {
+	$('#playclock-play').click(function() {
+		socket.emit('reset-playclock', { mode: 'play' });
+	});
+	$('#playclock-restart').click(function() {
 		var value = 20;
-		socket.emit('reset-playclock', { value: value });
+		socket.emit('reset-playclock', { mode: 'restart', value: value });
 	});
 
 });

@@ -53,6 +53,55 @@ $(document).ready(function() {
     }); 
 
     socket.on('playclock-reset', function (data) {
-        $('#playclock-timer').html(data.value);
+        //$('#playclock-timer').html(data.value);
+        if (data.mode == 'play') {
+            if (PlayClock.running) {
+                PlayClock.pause();
+            } else {
+                PlayClock.start();    
+            }
+        } else if (data.mode == 'restart') {
+            PlayClock.restart(data.value);
+        }
     }); 
+
+    var PlayClock = {
+        totalSeconds: 20,
+        running: false,
+
+        start: function () {
+            var self = this;
+            this.running = true;
+
+            this.interval = setInterval(function () {
+                if (self.totalSeconds == 0) {
+                    self.pause();
+                    return false;
+                }
+                self.totalSeconds -= 1;
+                //$("#min").text(Math.floor(self.totalSeconds / 60 % 60));
+                $("#playclock-timer").text(parseInt(self.totalSeconds % 60));
+            }, 1000);
+        },
+
+        pause: function () {
+            this.running = false;
+            clearInterval(this.interval);
+            delete this.interval;
+        },
+
+        restart: function(value) {
+            $("#playclock-timer").text(value);
+            clearInterval(this.interval);
+            delete this.interval;
+            this.totalSeconds = value;
+            this.start();
+        },
+
+        resume: function () {
+            if (!this.interval) this.start();
+        }
+    };
+
+    //
 });
