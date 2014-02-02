@@ -49,6 +49,9 @@ io.sockets.on('connection', function (socket) {
   socket.on('reset-playclock', function (data) {
     io.sockets.emit('playclock-reset', data);
   });
+  socket.on('update-gameclock', function (data) {
+    io.sockets.emit('gameclock-update', data);
+  });
 
 
 });

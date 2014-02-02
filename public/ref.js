@@ -90,4 +90,17 @@ $(document).ready(function() {
 		socket.emit('reset-playclock', { mode: 'restart', value: value });
 	});
 
+	$('#gameclock-play').click(function() {
+		socket.emit('update-gameclock', { mode: 'play' });
+	});
+	$('#gameclock-reset').click(function() {
+		socket.emit('update-gameclock', { mode: 'restart', min: '5', sec: '00' });
+	});
+	$('#gameclock-add-min').click(function() {
+		socket.emit('update-gameclock', { mode: 'add-min'});
+	});
+	$('#gameclock-minus-min').click(function() {
+		socket.emit('update-gameclock', { mode: 'subtract-min'});
+	});
+
 });

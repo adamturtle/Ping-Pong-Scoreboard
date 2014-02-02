@@ -64,6 +64,22 @@ $(document).ready(function() {
             PlayClock.restart(data.value);
         }
     }); 
+    socket.on('gameclock-update', function (data) {
+        //$('#playclock-timer').html(data.value);
+        if (data.mode == 'play') {
+            if (GameClock.running) {
+                GameClock.pause();
+            } else {
+                GameClock.start();    
+            }
+        } else if (data.mode == 'restart') {
+            GameClock.restart(data.min, data.sec);
+        } else if (data.mode == 'add-min') {
+            GameClock.addMin();
+        } else if (data.mode == 'subtract-min') {
+            GameClock.subtractMin();
+        }
+    }); 
 
     var PlayClock = {
         totalSeconds: 20,
@@ -103,5 +119,54 @@ $(document).ready(function() {
         }
     };
 
-    //
+    var GameClock = {
+        totalSeconds: 300,
+        running: false,
+
+        start: function () {
+            var self = this;
+            this.running = true;
+
+            this.interval = setInterval(function () {
+                if (self.totalSeconds == 0) {
+                    self.pause();
+                    return false;
+                }
+                self.totalSeconds -= 1;
+                $("#gameclock-min").text(Math.floor(self.totalSeconds / 60 % 60));
+                $("#gameclock-sec").text(parseInt(self.totalSeconds % 60));
+            }, 1000);
+        },
+
+        pause: function () {
+            this.running = false;
+            clearInterval(this.interval);
+            delete this.interval;
+        },
+
+        restart: function(min, sec) {
+            $("#gameclock-min").text(min);
+            $("#gameclock-sec").text(sec);
+            clearInterval(this.interval);
+            delete this.interval;
+            this.totalSeconds = 300;
+            this.pause();
+        },
+
+        resume: function () {
+            if (!this.interval) this.start();
+        },
+
+        addMin: function () {
+            this.totalSeconds += 60;
+            $("#gameclock-min").text(Math.floor(this.totalSeconds / 60 % 60));
+        },
+
+        subtractMin: function () {
+            if (this.totalSeconds > 60) {
+                this.totalSeconds -= 60;
+                $("#gameclock-min").text(Math.floor(this.totalSeconds / 60 % 60));
+            }
+        }
+    };
 });
