@@ -13,58 +13,59 @@ html
       #container
         #play-clock
           h4= "Play Clock" 
-          button#playclock-play= "play/pause"
-          button#playclock-restart= "restart"
+          button#playclock-play.primary= "play/pause"
+          button#playclock-restart.reset= "restart"
 
         #down
           h4= "Down"
           button#down-up= "+1"
-          button#down-down= "-1"
-          button#down-reset= "reset"
+          //button#down-down= "-1"
+          button#down-reset.reset= "reset"
 
 
         #clock
           h4= "Game Clock"
           button#gameclock-play= "Play/Pause"
-          button#gameclock-reset.reset= "reset"
-          .clear
-          button#gameclock-add-min= "+1 min"
-          button#gameclock-minus-min= "-1 min"
 
         #away-score
-          h4= "Away Team"
-          strong= "Points: "
+          h4= "Away Team Points"
           button#away-field-goal= "FG"
           button#away-touchdown= "TD"
           button#away-pat= "PAT"
 
-          .clear
-          input(id="away-team-score" type="number" value="0" style="width: 60px; margin-right: 20px;")
-          button#away-reset.reset= "reset"
-
-          .clear
-          strong= "Timeouts: "
-          button#away-team-timeouts-up= "+1"
-          button#away-team-timeouts-down= "-1"
-
         #home-score
-          h4= "Home team "
-          strong= "Points: "
+          h4= "Home Team Points"
 
           button#home-field-goal= "FG"
           button#home-touchdown= "TD"
           button#home-pat= "PAT"
 
-          .clear
-          input(id="home-team-score" type="number" value="0" style="width: 60px; margin-right: 20px;")
-          button#home-reset.reset= "reset"
-
-          .clear
-          strong= "Timeouts: "
-          button#home-team-timeouts-up= "+1"
-          button#home-team-timeouts-down= "-1"
-
         #quarter
           h4= "Quarter"
           button#quarter-up= "+1"
           button#quarter-down= "-1"
+
+        .timeouts
+          h4= "Timeouts"
+          h5= "Away Team"
+          button#away-team-timeouts-up= "+1"
+          button#away-team-timeouts-down= "-1"
+
+          h5= "Home Team"
+          button#home-team-timeouts-up= "+1"
+          button#home-team-timeouts-down= "-1"
+
+        .extras
+          h4= "Other options:"
+          h5= "Game Clock"          
+          button#gameclock-add-min= "+1 min"
+          button#gameclock-minus-min= "-1 min"
+          button#gameclock-reset.reset= "reset"
+
+          h5= "Away Team Score"
+          input(id="away-team-score" type="number" value="0" style="width: 60px; margin-right: 20px;")
+          button#away-reset.reset= "reset"
+
+          h5= "Home Team Score"
+          input(id="home-team-score" type="number" value="0" style="width: 60px; margin-right: 20px;")
+          button#home-reset.reset= "reset"
