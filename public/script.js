@@ -134,7 +134,11 @@ $(document).ready(function() {
                 }
                 self.totalSeconds -= 1;
                 $("#gameclock-min").text(Math.floor(self.totalSeconds / 60 % 60));
-                $("#gameclock-sec").text(parseInt(self.totalSeconds % 60));
+                var seconds = parseInt(self.totalSeconds % 60);
+                if (seconds < 10) {
+                    seconds = '0' + seconds;
+                }
+                $("#gameclock-sec").text(seconds);
             }, 1000);
         },
 
