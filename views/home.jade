@@ -10,48 +10,22 @@ html
     body
         #container
             .first-row
-                #away-score.box
-                    h4.label= "Creepers"
+                #player1.box
+                    h4.label= "Player 1"
                     .number
-                        span#away-team-score.score= "0"
+                        span#player-1-score.score= "0"
                     .clear
-                    .timeouts
-                        .number
-                            span#away-team-timeouts= "3"
-                        .label= "TOL" 
-                    
-                #timer.box
-                    .inner-box
-                        .number#gameclock-min= "5"
-                        span= ":"
-                        .number#gameclock-sec= "00"
+                    .number
+                        span.serving.number= "SERVICE"
 
-                #home-score.box
-                    h4.label= "Vendetta"
+
+
+                #player2.box
+                    h4.label= "Player 2"
                     .number
-                        span#home-team-score.score= "0"
+                        span#player-2-score.score= "0"
                     .clear
-                    .timeouts
-                        .number
-                            span#home-team-timeouts= "3"
-                        .label= "TOL"
+                    .number
+                        span.serving.number= ""
 
             .clear
-
-            .second-row
-                #quarter.box
-                    .number
-                        span#quarter-number= "1"
-                    .label= "QUARTER"
-
-                #down.box
-                    .number
-                        span#down-counter= "1"
-                    .label= "DOWN"
-
-                #playclock.box
-                    .number
-                        span#playclock-timer= "20"
-                    .label= "PLAY"
-
-                .clear

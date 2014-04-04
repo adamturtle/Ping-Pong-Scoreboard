@@ -26,32 +26,14 @@ app.get('/ref', function(req, res) {
 
 io.sockets.on('connection', function (socket) {
 
-  socket.on('update-home-team-score', function (data) {
-    io.sockets.emit('change-home-team-score', data);
+  socket.on('update-player-1-score', function (data) {
+    io.sockets.emit('change-player-1-score', data);
   });
-  socket.on('update-away-team-score', function (data) {
-    io.sockets.emit('change-away-team-score', data);
+  socket.on('update-player-2-score', function (data) {
+    io.sockets.emit('change-player-2-score', data);
   });
-
-  socket.on('update-home-team-timeouts', function (data) {
-    io.sockets.emit('change-home-team-timeouts', data);
-  });
-  socket.on('update-away-team-timeouts', function (data) {
-    io.sockets.emit('change-away-team-timeouts', data);
-  });
-
-  socket.on('update-quarter', function (data) {
-    io.sockets.emit('change-quarter', data);
-  });
-  socket.on('update-down', function (data) {
-    io.sockets.emit('change-down', data);
-  });
-  socket.on('reset-playclock', function (data) {
-    io.sockets.emit('playclock-reset', data);
-  });
-  socket.on('update-gameclock', function (data) {
-    io.sockets.emit('gameclock-update', data);
-  });
-
+  socket.on('update-service', function(data){
+    io.sockets.emit('change-service', data);
+  })
 
 });

@@ -1,71 +1,38 @@
 doctype html
 html
     head
-        title= "Football Pong Scoreboard Ref"
+        title= "Ping Pong Scoreboard Ref"
         meta(name="viewport" content="width=device-width, initial-scale=1")
         script(src='/jquery.min.js')
         script(src='/socket.io/socket.io.js')
         script(src='/ref.js')
         link(href='/ref.css' rel="stylesheet" type="text/css")
     body
-      h3= "Football Pong Scoreboard Controller"
+      h3= "Ping Pong Scoreboard Controller"
 
       #container
-        #play-clock
-          h4= "Play Clock" 
-          button#playclock-play.primary= "play/pause"
-          button#playclock-restart.reset= "restart"
-
-        #down
-          h4= "Down"
-          button#down-up= "+1"
-          //button#down-down= "-1"
-          button#down-reset.reset= "reset"
-
-
-        #clock
-          h4= "Game Clock"
-          button#gameclock-play= "Play/Pause"
-
-        #away-score
-          h4= "Away Team Points"
-          button#away-field-goal= "FG"
-          button#away-touchdown= "TD"
-          button#away-pat= "PAT"
-
-        #home-score
-          h4= "Home Team Points"
-
-          button#home-field-goal= "FG"
-          button#home-touchdown= "TD"
-          button#home-pat= "PAT"
-
-        #quarter
-          h4= "Quarter"
-          button#quarter-up= "+1"
-          button#quarter-down= "-1"
-
-        .timeouts
-          h4= "Timeouts"
-          h5= "Away Team"
-          button#away-team-timeouts-up= "+1"
-          button#away-team-timeouts-down= "-1"
-
-          h5= "Home Team"
-          button#home-team-timeouts-up= "+1"
-          button#home-team-timeouts-down= "-1"
-
         .extras
-          h4= "Other options:"
-          h5= "Game Clock"          
-          button#gameclock-add-min= "+1 min"
-          button#gameclock-minus-min= "-1 min"
-          button#gameclock-reset.reset= "reset"
+          h4= "Reset game"
+          button#reset= "Reset"
 
-          h5= "Away Team Score"
-          input(id="away-team-score" type="number" value="0" style="width: 60px; margin-right: 20px;")
-          button#away-reset.reset= "reset"
+        #player-1
+          h4= "Player 1 Score"
+          button#player-1-score-up= "+1"
+          button#player-1-score-down= "-1"
 
-          h5= "Home Team Score"
-          input(id="home-team-score" type="number" value="0" style="width: 60px; margin-right: 20px;")
-          button#home-reset.reset= "reset"
+        #player-2
+          h4= "Player 2 Score"
+          button#player-2-score-up= "+1"
+          button#player-2-score-down= "-1"
+
+        h5="Player 1 score"
+        input(id="player-1-score" type="number" value="0" style="width: 60px; margin-right: 20px;")
+
+        h5="Player 2 score"
+        input(id="player-2-score" type="number" value="0" style="width: 60px; margin-right: 20px;")
+
+        h5="Points"
+        input(id="points" type="number" value="0" style="width: 60px; margin-right: 20px;")
+
+        h5="Service"
+        input(id="service" type="number" value="1" style="width: 60px; margin-right: 20px;")
