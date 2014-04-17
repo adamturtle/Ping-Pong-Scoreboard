@@ -1,0 +1,334 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/Users/turtle/Sites/tests/Football-Pong-Scoreboard',
+5 verbose install   [ 'socket.io', 'express', 'jade', 'cheerio' ] ]
+6 info preinstall football-pong-scoreboard@0.1.0
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'jade@latest', null ]
+9 verbose cache add name=undefined spec="jade@latest" args=["jade@latest",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'jade@latest',
+10 verbose parsed url   path: 'jade@latest',
+10 verbose parsed url   href: 'jade@latest' }
+11 verbose cache add name="jade" spec="latest" args=["jade","latest"]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: 'latest',
+12 verbose parsed url   path: 'latest',
+12 verbose parsed url   href: 'latest' }
+13 verbose addNamed [ 'jade', 'latest' ]
+14 verbose addNamed [ null, null ]
+15 verbose cache add [ 'socket.io@latest', null ]
+16 verbose cache add name=undefined spec="socket.io@latest" args=["socket.io@latest",null]
+17 verbose parsed url { protocol: null,
+17 verbose parsed url   slashes: null,
+17 verbose parsed url   auth: null,
+17 verbose parsed url   host: null,
+17 verbose parsed url   port: null,
+17 verbose parsed url   hostname: null,
+17 verbose parsed url   hash: null,
+17 verbose parsed url   search: null,
+17 verbose parsed url   query: null,
+17 verbose parsed url   pathname: 'socket.io@latest',
+17 verbose parsed url   path: 'socket.io@latest',
+17 verbose parsed url   href: 'socket.io@latest' }
+18 verbose cache add name="socket.io" spec="latest" args=["socket.io","latest"]
+19 verbose parsed url { protocol: null,
+19 verbose parsed url   slashes: null,
+19 verbose parsed url   auth: null,
+19 verbose parsed url   host: null,
+19 verbose parsed url   port: null,
+19 verbose parsed url   hostname: null,
+19 verbose parsed url   hash: null,
+19 verbose parsed url   search: null,
+19 verbose parsed url   query: null,
+19 verbose parsed url   pathname: 'latest',
+19 verbose parsed url   path: 'latest',
+19 verbose parsed url   href: 'latest' }
+20 verbose addNamed [ 'socket.io', 'latest' ]
+21 verbose addNamed [ null, null ]
+22 verbose cache add [ 'express@0.3.x', null ]
+23 verbose cache add name=undefined spec="express@0.3.x" args=["express@0.3.x",null]
+24 verbose parsed url { protocol: null,
+24 verbose parsed url   slashes: null,
+24 verbose parsed url   auth: null,
+24 verbose parsed url   host: null,
+24 verbose parsed url   port: null,
+24 verbose parsed url   hostname: null,
+24 verbose parsed url   hash: null,
+24 verbose parsed url   search: null,
+24 verbose parsed url   query: null,
+24 verbose parsed url   pathname: 'express@0.3.x',
+24 verbose parsed url   path: 'express@0.3.x',
+24 verbose parsed url   href: 'express@0.3.x' }
+25 verbose cache add name="express" spec="0.3.x" args=["express","0.3.x"]
+26 verbose parsed url { protocol: null,
+26 verbose parsed url   slashes: null,
+26 verbose parsed url   auth: null,
+26 verbose parsed url   host: null,
+26 verbose parsed url   port: null,
+26 verbose parsed url   hostname: null,
+26 verbose parsed url   hash: null,
+26 verbose parsed url   search: null,
+26 verbose parsed url   query: null,
+26 verbose parsed url   pathname: '0.3.x',
+26 verbose parsed url   path: '0.3.x',
+26 verbose parsed url   href: '0.3.x' }
+27 verbose addNamed [ 'express', '0.3.x' ]
+28 verbose addNamed [ null, '>=0.3.0-0 <0.4.0-0' ]
+29 silly lockFile 50c7aeb0-jade-latest jade@latest
+30 verbose lock jade@latest /Users/turtle/.npm/50c7aeb0-jade-latest.lock
+31 silly lockFile d01f6c55-socket-io-latest socket.io@latest
+32 verbose lock socket.io@latest /Users/turtle/.npm/d01f6c55-socket-io-latest.lock
+33 verbose already installed skipping cheerio@~0.13.1 /Users/turtle/Sites/tests/Football-Pong-Scoreboard
+34 silly lockFile 2365752e-express-0-3-x express@0.3.x
+35 verbose lock express@0.3.x /Users/turtle/.npm/2365752e-express-0-3-x.lock
+36 info addNameTag [ 'jade', 'latest' ]
+37 info addNameTag [ 'socket.io', 'latest' ]
+38 silly addNameRange { name: 'express', range: '>=0.3.0-0 <0.4.0-0', hasData: false }
+39 verbose url raw jade
+40 verbose url resolving [ 'https://registry.npmjs.org/', './jade' ]
+41 verbose url resolved https://registry.npmjs.org/jade
+42 info trying registry request attempt 1 at 16:28:20
+43 verbose etag "9RF6E3MQ7VCPKJH875PQ8PPI4"
+44 http GET https://registry.npmjs.org/jade
+45 verbose url raw socket.io
+46 verbose url resolving [ 'https://registry.npmjs.org/', './socket.io' ]
+47 verbose url resolved https://registry.npmjs.org/socket.io
+48 info trying registry request attempt 1 at 16:28:20
+49 verbose etag "3HQTHO1N1XINDV8BIHU2XP19K"
+50 http GET https://registry.npmjs.org/socket.io
+51 verbose url raw express
+52 verbose url resolving [ 'https://registry.npmjs.org/', './express' ]
+53 verbose url resolved https://registry.npmjs.org/express
+54 info trying registry request attempt 1 at 16:28:20
+55 verbose etag "1R2D152T30BUNPB5GJ70URDE0"
+56 http GET https://registry.npmjs.org/express
+57 http 200 https://registry.npmjs.org/jade
+58 silly registry.get cb [ 200,
+58 silly registry.get   { date: 'Thu, 17 Apr 2014 20:28:21 GMT',
+58 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+58 silly registry.get     etag: '"9YYEJRMC2MZL4NTSUWVD93JP"',
+58 silly registry.get     'content-type': 'application/json',
+58 silly registry.get     via: '1.1 varnish',
+58 silly registry.get     'cache-control': 'max-age=1',
+58 silly registry.get     'content-length': '112290',
+58 silly registry.get     'accept-ranges': 'bytes',
+58 silly registry.get     age: '496',
+58 silly registry.get     'x-served-by': 'cache-v44-ASH, cache-d96-DAL',
+58 silly registry.get     'x-cache': 'HIT, HIT',
+58 silly registry.get     'x-cache-hits': '1, 1',
+58 silly registry.get     'x-timer': 'S1397701695.603992224,VS0,VS16,VE103,VE64806254',
+58 silly registry.get     vary: 'Accept',
+58 silly registry.get     'keep-alive': 'timeout=10, max=50',
+58 silly registry.get     connection: 'Keep-Alive' } ]
+59 http 200 https://registry.npmjs.org/socket.io
+60 silly registry.get cb [ 200,
+60 silly registry.get   { date: 'Thu, 17 Apr 2014 20:28:21 GMT',
+60 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+60 silly registry.get     etag: '"8U4VS7QYNOWBLVGPD6AB3VFWP"',
+60 silly registry.get     'content-type': 'application/json',
+60 silly registry.get     via: '1.1 varnish',
+60 silly registry.get     'cache-control': 'max-age=1',
+60 silly registry.get     'content-length': '78462',
+60 silly registry.get     'accept-ranges': 'bytes',
+60 silly registry.get     'x-served-by': 'cache-v37-ASH, cache-d46-DAL',
+60 silly registry.get     'x-cache': 'HIT, MISS',
+60 silly registry.get     'x-cache-hits': '2, 0',
+60 silly registry.get     'x-timer': 'S1397701936.885971546,VS0,VS14,VE14,VE64564980',
+60 silly registry.get     vary: 'Accept',
+60 silly registry.get     'keep-alive': 'timeout=10, max=50',
+60 silly registry.get     connection: 'Keep-Alive' } ]
+61 verbose addNamed [ 'jade', '1.3.1' ]
+62 verbose addNamed [ '1.3.1', '1.3.1' ]
+63 silly lockFile 7666cb91-jade-1-3-1 jade@1.3.1
+64 verbose lock jade@1.3.1 /Users/turtle/.npm/7666cb91-jade-1-3-1.lock
+65 verbose addNamed [ 'socket.io', '0.9.16' ]
+66 verbose addNamed [ '0.9.16', '0.9.16' ]
+67 silly lockFile a7acce22-socket-io-0-9-16 socket.io@0.9.16
+68 verbose lock socket.io@0.9.16 /Users/turtle/.npm/a7acce22-socket-io-0-9-16.lock
+69 silly lockFile 5acd7fce-ry-npmjs-org-jade-jade-1-3-1-tgz https://registry.npmjs.org/jade/-/jade-1.3.1.tgz
+70 verbose lock https://registry.npmjs.org/jade/-/jade-1.3.1.tgz /Users/turtle/.npm/5acd7fce-ry-npmjs-org-jade-jade-1-3-1-tgz.lock
+71 verbose addRemoteTarball [ 'https://registry.npmjs.org/jade/-/jade-1.3.1.tgz',
+71 verbose addRemoteTarball   '7483d848b8714dc50a40da98b0409790b374216b' ]
+72 info retry fetch attempt 1 at 16:28:21
+73 verbose fetch to= /var/folders/1x/258b0sgs3vz18x6rvpzvzznr0000gn/T/npm-36606-h4hdFo5D/1397766501618-0.986505045555532/tmp.tgz
+74 http GET https://registry.npmjs.org/jade/-/jade-1.3.1.tgz
+75 silly lockFile a7acce22-socket-io-0-9-16 socket.io@0.9.16
+76 silly lockFile a7acce22-socket-io-0-9-16 socket.io@0.9.16
+77 silly lockFile d01f6c55-socket-io-latest socket.io@latest
+78 silly lockFile d01f6c55-socket-io-latest socket.io@latest
+79 info already installed socket.io@0.9.16
+80 http 200 https://registry.npmjs.org/express
+81 silly registry.get cb [ 200,
+81 silly registry.get   { date: 'Thu, 17 Apr 2014 20:28:21 GMT',
+81 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+81 silly registry.get     etag: '"1YKFU8PX43YG2GVSW6EGL38WX"',
+81 silly registry.get     'content-type': 'application/json',
+81 silly registry.get     via: '1.1 varnish',
+81 silly registry.get     'cache-control': 'max-age=1',
+81 silly registry.get     'content-length': '173355',
+81 silly registry.get     'accept-ranges': 'bytes',
+81 silly registry.get     'x-served-by': 'cache-v44-ASH, cache-d96-DAL',
+81 silly registry.get     'x-cache': 'HIT, MISS',
+81 silly registry.get     'x-cache-hits': '2, 0',
+81 silly registry.get     'x-timer': 'S1397707587.043974876,VS0,VS17,VE17,VE58914876',
+81 silly registry.get     vary: 'Accept',
+81 silly registry.get     'keep-alive': 'timeout=10, max=50',
+81 silly registry.get     connection: 'Keep-Alive' } ]
+82 silly addNameRange number 2 { name: 'express', range: '>=0.3.0-0 <0.4.0-0', hasData: true }
+83 silly addNameRange versions [ 'express',
+83 silly addNameRange   [ '0.14.0',
+83 silly addNameRange     '0.14.1',
+83 silly addNameRange     '1.0.0',
+83 silly addNameRange     '1.0.1',
+83 silly addNameRange     '1.0.2',
+83 silly addNameRange     '1.0.3',
+83 silly addNameRange     '1.0.4',
+83 silly addNameRange     '1.0.5',
+83 silly addNameRange     '1.0.6',
+83 silly addNameRange     '1.0.7',
+83 silly addNameRange     '1.0.8',
+83 silly addNameRange     '2.0.0',
+83 silly addNameRange     '2.1.0',
+83 silly addNameRange     '2.1.1',
+83 silly addNameRange     '2.2.0',
+83 silly addNameRange     '2.2.1',
+83 silly addNameRange     '2.2.2',
+83 silly addNameRange     '2.3.0',
+83 silly addNameRange     '2.3.1',
+83 silly addNameRange     '2.3.2',
+83 silly addNameRange     '2.3.3',
+83 silly addNameRange     '2.3.4',
+83 silly addNameRange     '2.3.5',
+83 silly addNameRange     '2.3.6',
+83 silly addNameRange     '2.3.7',
+83 silly addNameRange     '2.3.8',
+83 silly addNameRange     '2.3.9',
+83 silly addNameRange     '2.3.10',
+83 silly addNameRange     '2.3.11',
+83 silly addNameRange     '2.3.12',
+83 silly addNameRange     '2.4.0',
+83 silly addNameRange     '2.4.1',
+83 silly addNameRange     '2.4.2',
+83 silly addNameRange     '2.4.3',
+83 silly addNameRange     '2.4.4',
+83 silly addNameRange     '2.4.5',
+83 silly addNameRange     '2.4.6',
+83 silly addNameRange     '2.4.7',
+83 silly addNameRange     '2.5.0',
+83 silly addNameRange     '2.5.1',
+83 silly addNameRange     '2.5.2',
+83 silly addNameRange     '2.5.3',
+83 silly addNameRange     '2.5.4',
+83 silly addNameRange     '2.5.5',
+83 silly addNameRange     '2.5.6',
+83 silly addNameRange     '2.5.7',
+83 silly addNameRange     '2.5.8',
+83 silly addNameRange     '2.5.9',
+83 silly addNameRange     '2.5.10',
+83 silly addNameRange     '2.5.11',
+83 silly addNameRange     '3.0.0',
+83 silly addNameRange     '3.0.1',
+83 silly addNameRange     '3.0.2',
+83 silly addNameRange     '3.0.3',
+83 silly addNameRange     '3.0.4',
+83 silly addNameRange     '3.0.5',
+83 silly addNameRange     '3.0.6',
+83 silly addNameRange     '3.1.0',
+83 silly addNameRange     '3.1.1',
+83 silly addNameRange     '3.1.2',
+83 silly addNameRange     '3.2.0',
+83 silly addNameRange     '3.2.1',
+83 silly addNameRange     '3.2.2',
+83 silly addNameRange     '3.2.3',
+83 silly addNameRange     '3.2.4',
+83 silly addNameRange     '3.2.5',
+83 silly addNameRange     '3.2.6',
+83 silly addNameRange     '3.3.0',
+83 silly addNameRange     '3.3.1',
+83 silly addNameRange     '3.3.2',
+83 silly addNameRange     '3.3.3',
+83 silly addNameRange     '3.3.4',
+83 silly addNameRange     '3.3.5',
+83 silly addNameRange     '3.3.6',
+83 silly addNameRange     '1.0.0-beta',
+83 silly addNameRange     '1.0.0-beta2',
+83 silly addNameRange     '1.0.0-rc',
+83 silly addNameRange     '1.0.0-rc2',
+83 silly addNameRange     '1.0.0-rc3',
+83 silly addNameRange     '1.0.0-rc4',
+83 silly addNameRange     '2.0.0-beta',
+83 silly addNameRange     '2.0.0-beta2',
+83 silly addNameRange     '2.0.0-beta3',
+83 silly addNameRange     '2.0.0-rc',
+83 silly addNameRange     '2.0.0-rc2',
+83 silly addNameRange     '2.0.0-rc3',
+83 silly addNameRange     '3.0.0-alpha1',
+83 silly addNameRange     '3.0.0-alpha2',
+83 silly addNameRange     '3.0.0-alpha3',
+83 silly addNameRange     '3.0.0-alpha4',
+83 silly addNameRange     '3.0.0-alpha5',
+83 silly addNameRange     '3.0.0-beta1',
+83 silly addNameRange     '3.0.0-beta2',
+83 silly addNameRange     '3.0.0-beta3',
+83 silly addNameRange     '3.0.0-beta4',
+83 silly addNameRange     '3.0.0-beta6',
+83 silly addNameRange     '3.0.0-beta7',
+83 silly addNameRange     '3.0.0-rc1',
+83 silly addNameRange     '3.0.0-rc2',
+83 silly addNameRange     '3.0.0-rc3',
+83 silly addNameRange     '3.0.0-rc4',
+83 silly addNameRange     '3.0.0-rc5',
+83 silly addNameRange     '3.3.7',
+83 silly addNameRange     '3.3.8',
+83 silly addNameRange     '3.4.0',
+83 silly addNameRange     '3.4.1',
+83 silly addNameRange     '3.4.2',
+83 silly addNameRange     '3.4.3',
+83 silly addNameRange     '3.4.4',
+83 silly addNameRange     '3.4.5',
+83 silly addNameRange     '3.4.6',
+83 silly addNameRange     '3.4.7',
+83 silly addNameRange     '3.4.8',
+83 silly addNameRange     '4.0.0-rc1',
+83 silly addNameRange     '4.0.0-rc2',
+83 silly addNameRange     '3.5.0',
+83 silly addNameRange     '4.0.0-rc3',
+83 silly addNameRange     '4.0.0-rc4',
+83 silly addNameRange     '3.5.1',
+83 silly addNameRange     '4.0.0' ] ]
+84 silly lockFile 2365752e-express-0-3-x express@0.3.x
+85 silly lockFile 2365752e-express-0-3-x express@0.3.x
+86 error notarget No compatible version found: express@'>=0.3.0-0 <0.4.0-0'
+86 error notarget Valid install targets:
+86 error notarget ["0.14.0","0.14.1","1.0.0","1.0.1","1.0.2","1.0.3","1.0.4","1.0.5","1.0.6","1.0.7","1.0.8","2.0.0","2.1.0","2.1.1","2.2.0","2.2.1","2.2.2","2.3.0","2.3.1","2.3.2","2.3.3","2.3.4","2.3.5","2.3.6","2.3.7","2.3.8","2.3.9","2.3.10","2.3.11","2.3.12","2.4.0","2.4.1","2.4.2","2.4.3","2.4.4","2.4.5","2.4.6","2.4.7","2.5.0","2.5.1","2.5.2","2.5.3","2.5.4","2.5.5","2.5.6","2.5.7","2.5.8","2.5.9","2.5.10","2.5.11","3.0.0","3.0.1","3.0.2","3.0.3","3.0.4","3.0.5","3.0.6","3.1.0","3.1.1","3.1.2","3.2.0","3.2.1","3.2.2","3.2.3","3.2.4","3.2.5","3.2.6","3.3.0","3.3.1","3.3.2","3.3.3","3.3.4","3.3.5","3.3.6","1.0.0-beta","1.0.0-beta2","1.0.0-rc","1.0.0-rc2","1.0.0-rc3","1.0.0-rc4","2.0.0-beta","2.0.0-beta2","2.0.0-beta3","2.0.0-rc","2.0.0-rc2","2.0.0-rc3","3.0.0-alpha1","3.0.0-alpha2","3.0.0-alpha3","3.0.0-alpha4","3.0.0-alpha5","3.0.0-beta1","3.0.0-beta2","3.0.0-beta3","3.0.0-beta4","3.0.0-beta6","3.0.0-beta7","3.0.0-rc1","3.0.0-rc2","3.0.0-rc3","3.0.0-rc4","3.0.0-rc5","3.3.7","3.3.8","3.4.0","3.4.1","3.4.2","3.4.3","3.4.4","3.4.5","3.4.6","3.4.7","3.4.8","4.0.0-rc1","4.0.0-rc2","3.5.0","4.0.0-rc3","4.0.0-rc4","3.5.1","4.0.0"]
+86 error notarget
+86 error notarget This is most likely not a problem with npm itself.
+86 error notarget In most cases you or one of your dependencies are requesting
+86 error notarget a package version that doesn't exist.
+87 error System Darwin 13.0.0
+88 error command "node" "/usr/local/bin/npm" "install"
+89 error cwd /Users/turtle/Sites/tests/Football-Pong-Scoreboard
+90 error node -v v0.10.26
+91 error npm -v 1.4.3
+92 error code ETARGET
+93 verbose exit [ 1, true ]
